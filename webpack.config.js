@@ -10,7 +10,7 @@ module.exports = {
         ],
 
         distributedColumns: './js/distributed-columns.js',
-        offerings: './js/offerings.js'
+        index: './index.js'
     },
 
     output: {
@@ -31,6 +31,14 @@ module.exports = {
                 loader: 'babel',
                 query: {
                     presets: ['es2015']
+                }
+            },
+            {
+                test: /\.tag$/,
+                exclude: /node_modules/,
+                loader: 'tag',
+                query: {
+                    presets: ['es2015-riot']
                 }
             }
         ]

@@ -5,14 +5,16 @@ const webpack = require('webpack');
 module.exports = {
     context: path.join(__dirname, '/src'),
     entry: {
-        jsEntry: './js/distributed-columns.js',
         vendor: [
             'eq.js'
-        ]
+        ],
+
+        distributedColumns: './js/distributed-columns.js',
+        index: './index.js'
     },
 
     output: {
-        filename: 'app.js',
+        filename: 'js/[name].js',
         path: path.join(__dirname, '/dist'),
     },
 
@@ -29,6 +31,14 @@ module.exports = {
                 loader: 'babel',
                 query: {
                     presets: ['es2015']
+                }
+            },
+            {
+                test: /\.tag$/,
+                exclude: /node_modules/,
+                loader: 'tag',
+                query: {
+                    presets: ['es2015-riot']
                 }
             }
         ]
@@ -48,6 +58,6 @@ module.exports = {
             }
         }),
 
-        new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.js')
+        new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.js'),
     ]
 }
