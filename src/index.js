@@ -1,7 +1,5 @@
-var riot = require('riot');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-require('./tags/offerings.tag');
-
-document.addEventListener('DOMContentLoaded', function () {
-    riot.mount('offerings');
-});
+ReactDOM.render(<App />, document.getElementById('root'));

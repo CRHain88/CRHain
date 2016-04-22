@@ -1,0 +1,10 @@
+.src_components_masonry-columns_js-containerStyles-default {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: -1rem -.5rem 0;
+}
+.src_components_masonry-columns_js-columnStyles-default {
+  padding: 0 .5rem;
+  width: 33%;
+}
