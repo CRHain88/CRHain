@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
 
+import MasonryColumn from './masonry-column';
+
 export default class MasonryColumns extends Component {
     constructor(props) {
         super(props);
@@ -71,43 +73,10 @@ export default class MasonryColumns extends Component {
     }
 
     render() {
-        const classes = classNames(styles.container);
-
         return (
-            <dl className={classes}>
+            <dl style={this.getContainerStyles()}>
                 {this.columns}
             </dl>
         );
     }
 }
-
-export class MasonryColumn extends Component {
-    getColumnWidth() {
-        return `${100 / this.props.columnCount}%`;
-    }
-
-    render() {
-        const classes = classNames(styles.column);
-
-        return (
-            <div
-                className={classes}
-                style={{width: this.getColumnWidth()}}
-            >
-                {this.props.children}
-            </div>
-        );
-    }
-}
-
-const styles = cssInJS({
-    container: {
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        margin: '-1rem -.5rem 0'
-    },
-    column: {
-        padding: '0 .5rem'
-    }
-});

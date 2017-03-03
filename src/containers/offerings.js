@@ -8,7 +8,7 @@ export default class Offerings extends Component {
     render() {
         return (
             <Row>
-                <Title>What I offer</Title>
+                <Title level="2">What I offer</Title>
                 <MasonryColumns>
                     <Offering
                         title="Design and development."
@@ -52,7 +52,7 @@ export default class Offerings extends Component {
 
                     <Offering
                         title="Empathy."
-                        description="If you're a little obsessive compulsive and need a ninth offering here just so the section is even, I got you. Like I wrote earlier, I call that user-focused design. View the page on your phone and you won't even see this paragraph."
+                        description="If you're a little obsessive compulsive and need a ninth offering here just so the section is even, I got you. Like I wrote earlier, I call that <em>user-focused design</em>. View the page on your phone and you won't even see this paragraph."
                     />
                 </MasonryColumns>
             </Row>

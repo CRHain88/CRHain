@@ -6,6 +6,7 @@ module.exports = {
     entry: [
         'webpack-dev-server/client?http://localhost:3000',
         'webpack/hot/only-dev-server',
+        'webpack-hot-middleware/client',
         './src/index'
     ],
     output: {
@@ -14,7 +15,9 @@ module.exports = {
         publicPath: '/static/'
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ],
     module: {
         loaders: [{

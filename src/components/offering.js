@@ -26,7 +26,10 @@ export default class Offering extends Component {
         return (
             <div style={this.getStyles()}>
                 <dt style={this.getTitleStyles()}>{this.props.title}</dt>
-                <dd style={this.getDescriptionStyles()}>{this.props.description}</dd>
+                <dd
+                    style={this.getDescriptionStyles()}
+                    dangerouslySetInnerHTML={{ __html: this.props.description }}
+                />
             </div>
         );
     }
