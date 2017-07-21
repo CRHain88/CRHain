@@ -1,9 +1,0 @@
-.src_components_masonry-column_js-styles-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: -1rem -.5rem 0;
-}
-.src_components_masonry-column_js-styles-column {
-  padding: 0 .5rem;
-}

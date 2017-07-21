@@ -1,29 +1,27 @@
-var path = require('path');
-var webpack = require('webpack');
-
 module.exports = {
-    devtool: 'eval',
-    entry: [
-        'webpack-dev-server/client?http://localhost:3000',
-        'webpack/hot/only-dev-server',
-        'webpack-hot-middleware/client',
-        './src/index'
-    ],
-    output: {
-        path: path.join(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/static/'
+    context: __dirname + '/src',
+    entry: {
+        javascript: './js/app.js',
+        html: './index.html',
     },
-    plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
-    ],
+    output: {
+        filename: '[name].js',
+        path: __dirname + '/dist',
+    },
+    resolve: {
+        extensions: ['.js', '.jsx', '.json'],
+    },
     module: {
-        loaders: [{
-            test: /\.js$/,
-            loaders: ['react-hot', 'babel'],
-            include: path.join(__dirname, 'src')
-        }]
-    }
+        loaders: [
+            {
+                test: /\.jsx?$/,
+                exclude: /node_modules/,
+                loaders: ['react-hot-loader', 'babel-loader'],
+            },
+            {
+                test: /\.html$/,
+                loader: 'file-loader?name=[name].[ext]',
+            },
+        ],
+    },
 };

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+        <title>Resume</title>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,900" rel="stylesheet">
+        <style>
+            @page :first {
+                margin: .5in 1.25in 1in;
+            }
+
+            @page {
+                margin: 1in 1.25in .5in;
+            }
+
+            html {
+                font-size: 14px;
+                font-family: "Merriweather";
+                font-weight: 300;
+                line-height: 22px;
+            }
+
+            @media print {
+                html {font-size: 8pt; line-height: 12pt;}
+            }
+
+            h2 {
+                font-family: "AmsiProCond-Ultra", "Helvetica Condensed", "Arial Narrow", sans-serif;
+                font-weight: 700;
+                font-size: 1.75rem;
+                margin: 0;
+            }
+
+            p {
+                margin: 0;
+            }
+
+            p + p {
+                margin: 1rem 0 0;
+            }
+
+            a {
+                color: inherit;
+                font-style: italic;
+            }
+
+            @media print {
+                p,
+                li {color: #000}
+            }
+
+            .content {
+                max-width: 51.75rem;
+                margin: 0 auto;
+            }
+
+            .header {
+                font-family: "Merriweather";
+                margin: 6.25rem 0;
+            }
+
+            .header p,
+            .header h1 {
+                margin: 0;
+            }
+
+            .header h1 {
+                font-size: 1.25rem;
+                font-weight: 700;
+            }
+
+            .header__group + .header__group {
+                margin-top: 1rem;
+            }
+
+            @media print, (min-width: 51.75rem) {
+                .content__columns {
+                    display: flex;
+                }
+            }
+
+            .content__section + .content__section {
+                margin: 4rem 0 0;
+            }
+
+            h2 + .content__columns {
+                margin-top: 1rem;
+            }
+
+            @media print, (min-width: 51.75rem) {
+                .column--left {
+                    width: 9rem;
+                }
+
+                .column--right {
+                    width: calc(100% - 9rem);
+                }
+            }
+
+            .resume-list {
+                list-style: none;
+                padding: 0 0 0 2.5rem;
+                margin: 0 0 0 .625rem;
+                border-left: 1px solid rgba(0, 0, 0, .3);
+            }
+
+            .resume-subhead {
+                margin: 0;
+                font-size: 1.25rem;
+                line-height: 1.5rem;
+                font-family: "AmsiProCond-Light", "Helvetica Condensed", "Arial Narrow", sans-serif;
+                text-transform: uppercase;
+                font-weight: 200;
+            }
+
+            .content__columns + .content__columns {
+                margin: 2rem 0 0;
+            }
+
+            .content__columns--list + .content__columns--list {
+                margin: 0;
+            }
+
+            @media print, (min-width: 51.75rem) {
+                .column--right {
+                    width: calc(100% - 9rem);
+                }
+            }
+
+            .content__columns--list + .content__columns--list {
+                margin-top: 2rem;
+            }
+
+            @media print, (min-width: 51.75rem) {
+                .content__columns--list + .content__columns--list {
+                    margin-top: 0;
+                }
+
+                .content__columns--list + .content__columns--list .resume-list {
+                    padding-top: 2rem;
+                }
+
+                .content__columns--list + .content__columns--list .resume-subhead {
+                    padding-top: 2.2rem;
+                }
+            }
+
+            .column--right {
+                margin-top: 1rem;
+            }
+
+            @media print, (min-width: 51.75rem) {
+                .column--right {
+                    margin-top: 0;
+                }
+            }
+
+            .resume-list li + li {
+                margin-top: .75rem;
+            }
+
+            .resume-list li {
+                position: relative;
+            }
+
+            .resume-list li:before {
+                content: "";
+                display: block;
+                width: .75rem;
+                height: 1px;
+                background: rgba(0, 0, 0, .3);
+                position: absolute;
+                left: -2.5rem;
+                top: .75rem;
+            }
+
+            @media print {
+                .resume-list li:before {
+                    top: .5rem;
+                }
+            }
+
+            .resume-list h4 {
+                font-style: italic;
+                margin: 0;
+            }
+
+            .experience__header {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .experience__company {
+                font-family: "AmsiProCond-Bold", "Helvetica Condensed", "Arial Narrow", sans-serif;
+                font-weight: 500;
+                font-size: 1.25rem;
+                margin: 0;
+                order: 1;
+            }
+
+            .experience__dates {
+                font-family: "AmsiProCond-Light", "Helvetica Condensed", "Arial Narrow", sans-serif;
+                font-weight: 200;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+                <div class="header__group">
+                    <h1>Christian Hain</h1>
+                    <p>Sr. Web Developer</p>
+                </div>
+                <div class="header__group">
+                    <p>(610) 568-6038</p>
+                    <p>christian@crhain.com</p>
+                </div>
+            </div>
+        </div>
+
+        <main class="content">
+            <section class="content__section">
+                <h2>Qualifications</h2>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">8 years experience</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Around eight years of experience in web based user interface design, development, user experience enhancement, and testing web pages with usability standards.</li>
+                        <li>Strong experience in creating secure web applications with dynamic content and developing highly interactive Rich Internet Applications (RIA)</li>
+                        <li>Extensive knowledge of cross-browser compatibility issues, W3C standards, optimized web graphics, UI design life cycles, including designing and incorporating graphic user interface (GUI) features.</li>
+                        <li>Expertise experience in conceptualizing business requirement. Design prototype from concepts. Developing front end code and converting prototypes into a user interface and implementing the look and feel of web pages.</li>
+                        <li>Strong skills and experience in UI designing and developing 3 tier web based application.</li>
+                        <li>Experienced in object-oriented programming using Java and developing middleware applications.</li>
+                        <li>Strong knowledge and expertise in JavaScript, HTML, XML, JSON and AJAX.</li>
+                        <li>Experienced in designing and developing client/server interfaces using JSON and JSONP.</li>
+                        <li>Experienced in documenting and implementing best practices for developing a web-based user interface.</li>
+                        <li>Scrums with the best of them.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Knows libraries, frameworks, and methodologies</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Experienced with jQuery and other JavaScript abstraction libraries.</li>
+                        <li>Used React, React Native, Redux, Angular.js, Dust.js, Twig as templating languages.</li>
+                        <li>Experienced in designing and developing a user interface framework based on JavaScript.</li>
+                        <li>Experienced in designing and developing proprietary CSS frameworks.</li>
+                        <li>Experienced in using open source CSS frameworks such as Foundation and Bootstrap.</li>
+                        <li>Used BEM, SMACCs, and other naming conventions to help manage enterprise-level CSS.</li>
+                        <li>Loves the lobotomized owl approach to spacing elements.</li>
+                        <li>Participated in Agile teams, Khanban teams, and Hack-A-Thon style teams.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Delivers</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Used Gulp, Grunt, and Webpack to compile code.</li>
+                        <li>Experience with Docker and Docker Compose to create images to send to production or other environments. Including local development.</li>
+                        <li>Good expertise in setting up unit tests.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Actually uses the Internet from<br>time-to-time</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Solid background and hands-on experience with usability.</li>
+                        <li>Constantly considers accessibility.</li>
+                        <li>Advocate for real responsive design; prefers not just to stack things on mobile.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content__section">
+                <h2>Skills and Proficiencies</h2>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Can turn on a computer</h3>
+                    <ul class="column column--right resume-list">
+                        <li>macOS, UNIX, LINUX, and Windows.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Uses development software</h3>
+                    <ul class="column column--right resume-list">
+                        <li>
+                            <h4>Editors and IDEs:</h4>
+                            Atom, Sublime, WebStorm, TextMate, Eclipse.
+                        </li>
+                        <li>
+                            <h4>Desgin Apps:</h4>
+                            Sketch, Adobe Creative Suite (Photoshop, InDesign, Illustrator), and Affinity.
+                        </li>
+                        <li>
+                            <h4>SaaS:</h4>
+                            Jira, Trello, GitHub, BitBucket, and Zeplin.
+                        </li>
+                        <li>
+                            <h4>Version Control:</h4>
+                            Git and Subversion (SVN).
+                        </li>
+                        <li>
+                            <h4>Libraries / Languages:</h4>
+                            React.js, Angular.js, Docker, Redux, Webpack, Babel, ECMAScript2016, Dust.js, Sass, Less, CSS, HTML, JavaScript, jQuery, Craft, ExpressionEngine, Twig, Struts, FreeMarker, and JSRender/JSView.
+                        </li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">A team player with leadership skills</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Software Development Methodologies, Conceptual Development, Print Design and Production, Web Design and Construction, Content Management Systems, Team Building, and Leadership.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content__section">
+                <div style="page-break-before: always;"></div>
+
+                <h2>Professional Experience</h2>
+                <div class="content__columns experience">
+                    <div class="column column--left experience__header">
+                        <h3 class="experience__company">Turner Services / CNN</h3>
+                        <div class="experience__dates">Sept. 2012&mdash;May 2017</div>
+                    </div>
+                    <div class="column column--right">
+                        <p>In 2011, I joined CNN to work on their Election Center website (Romney vs. Obama). My contribution was adding punctuation to “U.S. House” and “U.S. Senate” on the <a href="http://www.cnn.com/election/2012/results/race/house/" rel="nofollow" target="_blank">Race &amp; Results</a> pages.</p>
+                        <p>I sought redemption in 2016 when I asked to work on the Election Center again (from the beginning, this time. Not a few weeks before election day). Starting in the primaries, a team of five people a data-drive website connected to AP data sources and presented users with live data as voting results were released. The app was built in React.js and reached an audience of thirteen million unique visitors, and two million concurrent visitors at our peak.</p>
+                        <p>Other contributions included a site redesign from 2012—2013, updates to the now-defunct iReport social platform, several section front redesigns, and a few internal story-telling tools.</p>
+                    </div>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Built Websites</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Built the 2016 Election Center Website in React.js in four months that supported millions of unique visitors.</li>
+                        <li>Wrote an internal mapping application that used Angular and Google Maps API v3; then immediately switched it over to MapBox because they offered better licensing terms. The project has since been rewritten again in React and Google Maps (since they offered even better terms).</li>
+                        <li>Participated in an entire rewrite of the CNN Website.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Used fancy new libraries and technologies</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Used other cutting-edge libraries and APIs such as Docker, ECMAScript 2016, Babel and Webpack.</li>
+                        <li>No longer cutting edge, but at the time they were: Node, Dust.js, and Angular.js (not together, two separate projects).</li>
+                        <li>Also used common frameworks such as everybody’s favorite library, jQuery. And Sass. And CSS3. And HTML5. All the prerequisite buzzwords. I could even throw in Handlebars, Twig, Less, and JavaScript.</li>
+                        <li>Sites were responsive, as you’d expect.</li>
+                        <li>Used databases, both sequel, and no-sequel (again, not together).</li>
+                        <li>Wrote a couple of shell scripts.</li>
+                        <li>Used Java/FreeMarker before switching to Node.</li>
+                        <li>Used package managers: NPM and Bower.</li>
+                        <li>Used task runners: Webpack, Grunt, Gulp.</li>
+                        <li>Github, Bitbucket, and a brief stint with Subversion.</li>
+                        <li>Wrote a Facebook Chat-Bot API with IBM Watson.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Worked well with others</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Built close working relationships with multiple stakeholders.</li>
+                        <li>Worked in an Agile team, Khanban teams, internal hack-a-thon-esque teams. Whatever methodology suited the PM’s desires. So yeah… Scrum.</li>
+                        <li>Used ticketing systems: Jira, Trello, GitHub Issues, sticky notes (This time, all together. It was a nightmare).</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Made worthwhile contributions</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Constantly questioned the status-quo, came up with solutions to better the team and the software we wrote.</li>
+                        <li>One of the lead front-end developers (user interfaces, user experiences, CSS, HTML, accessibility, semantics).</li>
+                        <li>Advocate for developer experience and making sure junior devs can easily contribute alongside senior developers.</li>
+                        <li>Interviewed the President of Atlanta’s Center for the Visually Impaired to get a better understanding of how users use screen readers and VoiceOver technology.</li>
+                        <li>Participated in A/B testing. Conducted focus groups. Empathized with users to deliver products that met their needs.</li>
+                        <li>Studied project’s success regarding generated ad revenue vs. project cost.</li>
+                        <li>Wrote scripts to study the layouts editors are using most frequently on the homepage as a way to identify areas of opportunity for improvement.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content__section">
+                <h2>Professional Experience</h2>
+                <div class="content__columns experience">
+                    <div class="column column--left experience__header">
+                        <h3 class="experience__company">Wipro Technologies / Delta Airlines</h3>
+                        <div class="experience__dates">Nov. 2011&mdash;Aug. 2012</div>
+                    </div>
+                    <div class="column column--right">
+                        <p>2011 was the year that I decided to go all-in and become a developer. I opened by business, packed all of my life’s belongings in a SMART Car and moved from New Jersey to Georgia.</p>
+                        <p>Delta offered me an opportunity to help rebuild their website. After merging with Northwest Airlines, Delta had hired Razorfish to design a new experience and several contractors to help deliver. They uprooted and rewrote everything: databases, server logic, front-end website, mobile website, and their mobile app. It was an exciting experience.</p>
+                        <p>I primarily focused on their loyalty SkyMiles program. Buying, selling, gifting, and donating miles required the user to be logged in. There were also several checks in place to make sure that the customer met all necessary conditions like sufficient balances or business-imposed minimums and maximums.</p>
+                        <p>Additionally, I worked on their log-in system, and a part of their destination-discovery service using Google Maps.</p>
+                    </div>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Wore the hat of a leader&hellip;</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Led development teams through the construction of both an e-commerce &amp; loyalty web app, and sitewide widget application connecting to third-party web services.</li>
+                        <li>Worked with design teams to communicate the vision, identify areas for improvement, and implement design ideas.</li>
+                        <li>Drove QA meetings to identify bugs and defects to ensure proper accountability and promptly fix the code.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">&hellip;And A developer</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Worked closely with Java developers to create JSP pages using both Struts2 and Ajax (DWR and jQuery) to send and receive data.</li>
+                        <li>Involved in executing unit test for each module and integration, system testing and UAT. </li>
+                        <li>Implemented Omniture/SiteCatalyst tracking.</li>
+                        <li>Helped develop custom Google Maps based on Google Maps API 3.</li>
+                        <li>Created stylesheets to support IE 7-9, Mozilla, and Webkit browsers. Used CSS 3 where appropriate.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Used lots of things</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Used IBM RAD for development, and IBM ClearCase for source control (Never again!).</li>
+                        <li>Used Adobe CQ as a CMS.</li>
+                        <li>Used Omniture and SiteCatalyst Analytics.</li>
+                        <li>Used jQuery to write object-oriented JavaScript code.</li>
+                        <li>Used jQuery UI elements to create buttons, sliders, calendar widgets, and modal boxes.</li>
+                        <li>Used the LESS framework to build maintainable CSS.</li>
+                        <li>Used JAWR for file stitching to reduce HTTP Requests.</li>
+                        <li>Used WCM and CDN to manage and distribute image sprites and assets.</li>
+                        <li>Used UX principles to ensure a pleasurable user experience.</li>
+                        <li>Used MotionPoint to offer foreign translations.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content__section">
+                <h2>Professional Experience</h2>
+                <div class="content__columns experience">
+                    <div class="column column--left experience__header">
+                        <h3 class="experience__company">Smart Product Innovations, Inc.</h3>
+                        <div class="experience__dates">Sept. 2009&mdash;Nov. 2011</div>
+                    </div>
+                    <div class="column column--right">
+                        <p>My first job out of college was for an industrial manufacturing company. Smart Vent Products, Inc. (under the umbrella of Smart Product Innovations, Inc.) developed a patented wet-floodproofing vents that would help protect homes and business during floods.</p>
+                        <p>When I joined, they were also planning to release a consumer product for dispenses paper towels without having to touch anything.</p>
+                        <p>Half my time was spent designing things such as flyers, retail boxes, instruction manuals; mostly created ads, though. I also told them I could build their website.</p>
+                        <p>As it turns out, an art school doesn’t provide the necessary training to build commercial-grade internet sites. We worked with a contractor in Colorado who helped teach me what a CMS was, and on my own, I took classes for JavaScript and jQuery (because everything I learned about Flash was proving worthless at the time).</p>
+                        <p>I still work with Smart Vent today to help with their many other business ventures.</p>
+                    </div>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Designed A lot of things for print</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Used Illustrator to create site mockups/assets, as well as technical Illustrations of the CLEANCut Touchless Paper Towl Dispenser and Smart Vent Flood Vents and accessories.</li>
+                        <li>Designed ads, logos, collateral, manuals, forms, and other print materials.</li>
+                        <li>Created custom web-abs for US, Canadian, and Italian markets.</li>
+                    </ul>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">And built A website</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Built a website using ExpressionEngine for the CLEANCut Touchless Paper Towel Dispenser that included demo videos, infomercial landing pages, news releases, videos, a GoDaddy shopping cart.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content__section">
+                <div style="page-break-before: always;"></div>
+
+                <h2>Professional Experience</h2>
+                <div class="content__columns experience">
+                    <div class="column column--left experience__header">
+                        <h3 class="experience__company">Stuzo</h3>
+                        <div class="experience__dates">Sept. 2007&mdash;Nov. 2009</div>
+                    </div>
+                    <div class="column column--right">
+                        <p>The Stuzo Group is where my professional web experience started. At the time, Facebook Pages allowed brands to create custom games and sweepstakes on their platform, and Stuzo was one of the top-five partners they recommended.</p>
+                        <p>Not much glory in this job, I spent a lot of time splicing graphics designed by somebody else to hand them over to developers in Scandinavia. I include this story though because this is the place where I read the book, “Don’t Make Me Think,” by Steve Krug. And thus, my quest began.</p>
+                    </div>
+                </div>
+                <div class="content__columns content__columns--list">
+                    <h3 class="column column--left resume-subhead">Interned</h3>
+                    <ul class="column column--right resume-list">
+                        <li>Spliced PSDs into PNGs and JPGs for Facebook campaigns.</li>
+                        <li>Read books on UI/UX.</li>
+                        <li>Helped design Stuzo website.</li>
+                        <li>Got coffee once; it was a right of passage.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="content__section">
+                <h2>Education</h2>
+                <p>Art Institute of Philadelphia, Philadelphia, PA — BS Graphic Design, 2009</p>
+            </section>
+        </main>
+    </body>
+</html>
